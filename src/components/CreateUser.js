@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ export default class CreateUser extends Component {
   render() {
     return (
       <div>
+          <Navbar/>
         <h3>Create New User</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 

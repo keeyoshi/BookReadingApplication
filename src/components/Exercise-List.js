@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import NavBar from './Navbar'
+
 
 const Exercise = props => (
   <tr>
@@ -51,6 +53,7 @@ export default class ExercisesList extends Component {
   render() {
     return (
       <div>
+          <NavBar />
         <h3>Logged Exercises</h3>
         <table className="table">
           <thead className="thead-light">
