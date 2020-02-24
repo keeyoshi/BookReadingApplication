@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import NavBar from './navbar.component';
+import Footer from './Footer';
 
 const Exercise = props => (
   <tr>
@@ -9,7 +11,7 @@ const Exercise = props => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
+      <Link to={"/edit/"+props.exercise._id}>EDIT</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>DELETE</a>
     </td>
   </tr>
 )
@@ -51,11 +53,14 @@ export default class ExercisesList extends Component {
   render() {
     return (
       <div>
+        <NavBar/>
+        <br />
         <h3>Logged Exercises</h3>
+        <br/>
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th>Username</th>
+              <th>User</th>
               <th>Description</th>
               <th>Duration</th>
               <th>Date</th>
@@ -66,6 +71,7 @@ export default class ExercisesList extends Component {
             { this.exerciseList() }
           </tbody>
         </table>
+        <Footer/>
       </div>
     )
   }

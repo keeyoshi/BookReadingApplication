@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './navbar.component';
+import Footer from './Footer';
+import user1 from "./Image/user1.png"
+
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -39,7 +43,10 @@ export default class CreateUser extends Component {
   render() {
     return (
       <div>
-        <h3>Create New User</h3>
+        <NavBar />
+        <br/>
+        <h3>Add User</h3>
+        <br/>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Username: </label>
@@ -51,9 +58,13 @@ export default class CreateUser extends Component {
                 />
           </div>
           <div className="form-group">
-            <input type="submit" value="Create User" className="btn btn-primary" />
+            <input type="submit" value="Create User" className="btn btn-danger" />
           </div>
         </form>
+        <br/>
+        <div className="container-fluid">
+        <img src={user1} height="350px" align="center"/></div>
+        <Footer />
       </div>
     )
   }

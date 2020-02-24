@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import NavBar from './navbar.component';
+import Footer from './Footer';
+
 
 export default class CreateExercise extends Component {
   constructor(props) {
@@ -77,13 +80,15 @@ export default class CreateExercise extends Component {
     axios.post('http://localhost:5000/exercises/add', exercise)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    window.location = '/exercise';
   }
 
   render() {
     return (
     <div>
-      <h3>Create New Exercise Log</h3>
+      <div> <NavBar /></div>
+     <br/>
+      <h3>New Exercise Log </h3><br/>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Username: </label>
@@ -129,11 +134,12 @@ export default class CreateExercise extends Component {
             />
           </div>
         </div>
-
+                <br></br>
         <div className="form-group">
-          <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
+          <input type="submit" value="Create Exercise Log" className="btn btn-danger" />
         </div>
       </form>
+      <Footer />
     </div>
     )
   }
