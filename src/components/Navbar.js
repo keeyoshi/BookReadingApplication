@@ -49,3 +49,30 @@ class Navigation extends Component {
 
 export default withRouter(Navigation)
 
+<<<<<<< HEAD:src/components/navbar.component.js
+=======
+  render() {
+    return (
+      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+        <Link to="/exercise" className="navbar-brand">ExerciseTracker Now</Link>
+        <div className="collpase navbar-collapse">
+        <ul className="navbar-nav mr-auto">
+          <li className="navbar-item">
+          <Link to="/exercise" className="nav-link">Exercises</Link>
+          </li>
+          <li className="navbar-item">
+          <Link to="/create" className="nav-link">Create Exercise Log</Link>
+          </li>
+          <li className="navbar-item">
+          <Link to="/user" className="nav-link">Create User</Link>
+          </li>
+          <li className="navbar-item">
+          <Link to="/" className="nav-link">Logout</Link>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    );
+  }
+}
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Navbar.js

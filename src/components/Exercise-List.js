@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+<<<<<<< HEAD:src/components/exercises-list.component.js
 import NavBar from './navbar.component';
 import Footer from './Footer';
+=======
+import NavBar from './Navbar'
+
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Exercise-List.js
 
 const Exercise = props => (
   <tr>
@@ -53,8 +58,12 @@ export default class ExercisesList extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD:src/components/exercises-list.component.js
         <NavBar/>
         <br />
+=======
+          <NavBar />
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Exercise-List.js
         <h3>Logged Exercises</h3>
         <br/>
         <table className="table">

@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import NavBar from './navbar.component';
+<<<<<<< HEAD:src/components/edit-exercise.component.js
 import Footer from './Footer';
+import NavBar from './navbar.component';
+=======
+import NavBar from './Navbar';
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Edit-Exercise.js
 
-
-export default class CreateExercise extends Component {
+export default class EditExercise extends Component {
   constructor(props) {
     super(props);
 
@@ -26,12 +29,24 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
+    axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
+      .then(response => {
+        this.setState({
+          username: response.data.username,
+          description: response.data.description,
+          duration: response.data.duration,
+          date: new Date(response.data.date)
+        })   
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+
     axios.get('http://localhost:5000/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
             users: response.data.map(user => user.username),
-            username: response.data[0].username
           })
         }
       })
@@ -77,7 +92,7 @@ export default class CreateExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('http://localhost:5000/exercises/add', exercise)
+    axios.post('http://localhost:5000/exercises/update/' + this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
 
     window.location = '/exercise';
@@ -86,9 +101,13 @@ export default class CreateExercise extends Component {
   render() {
     return (
     <div>
-      <div> <NavBar /></div>
-     <br/>
-      <h3>New Exercise Log </h3><br/>
+<<<<<<< HEAD:src/components/edit-exercise.component.js
+     <NavBar />
+      <h3>Edit User Exercise Log</h3>
+=======
+        <NavBar/>
+      <h3>Edit Exercise Log</h3>
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Edit-Exercise.js
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Username: </label>
@@ -134,12 +153,12 @@ export default class CreateExercise extends Component {
             />
           </div>
         </div>
-                <br></br>
+
         <div className="form-group">
-          <input type="submit" value="Create Exercise Log" className="btn btn-danger" />
+          <input type="submit" value="Edit Exercise Log" className="btn btn-danger" />
         </div>
       </form>
-      <Footer />
+      <Footer/>
     </div>
     )
   }

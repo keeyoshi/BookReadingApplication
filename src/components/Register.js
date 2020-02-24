@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { Button, Form, FormGroup, Label, Input, Container, FormText } from 'reactstrap'
 import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
+<<<<<<< HEAD
+=======
+import'./Style.css';
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0
 
 export default class Register extends Component {
 
@@ -49,12 +53,21 @@ export default class Register extends Component {
             return <Redirect to='/exercise' />
         }
         return (
+<<<<<<< HEAD
             <Container>
                 <h2>Sign Up</h2>
                 <Form>
                     <FormGroup>
                         <Label for='firstName'>First Name</Label>
                         <Input type='text'  name='firstName' id='firstName'
+=======
+            <Container className="box">
+                <h2>Register Now</h2>
+                <Form>
+                    <FormGroup>
+                        <Label for='firstName'>First Name</Label>
+                        <Input type='text' name='firstName' id='firstName'
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0
                             value={this.state.firstName} onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>

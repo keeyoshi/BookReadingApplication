@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+<<<<<<< HEAD:src/components/create-user.component.js
 import NavBar from './navbar.component';
 import Footer from './Footer';
 import user1 from "./Image/user1.png"
 
+=======
+import Navbar from './Navbar';
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/CreateUser.js
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -43,10 +47,15 @@ export default class CreateUser extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD:src/components/create-user.component.js
         <NavBar />
         <br/>
         <h3>Add User</h3>
         <br/>
+=======
+          <Navbar/>
+        <h3>Create New User</h3>
+>>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/CreateUser.js
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Username: </label>
