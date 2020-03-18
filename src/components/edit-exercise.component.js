@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-<<<<<<< HEAD:src/components/edit-exercise.component.js
-import Footer from './Footer';
 import NavBar from './navbar.component';
-=======
-import NavBar from './Navbar';
->>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Edit-Exercise.js
+import Footer from "./Footer";
 
 export default class EditExercise extends Component {
   constructor(props) {
@@ -101,13 +97,8 @@ export default class EditExercise extends Component {
   render() {
     return (
     <div>
-<<<<<<< HEAD:src/components/edit-exercise.component.js
-     <NavBar />
-      <h3>Edit User Exercise Log</h3>
-=======
-        <NavBar/>
+      <NavBar/>
       <h3>Edit Exercise Log</h3>
->>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Edit-Exercise.js
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Username: </label>
@@ -155,7 +146,7 @@ export default class EditExercise extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Edit Exercise Log" className="btn btn-danger" />
+          <input type="submit" value="Edit Exercise Details" className="btn btn-danger" />
         </div>
       </form>
       <Footer/>

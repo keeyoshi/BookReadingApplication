@@ -3,7 +3,7 @@ import Navbar from "./navbar.component";
 import Footer from "./Footer";
 import './home.css'
 import { Container, Row } from 'reactstrap';
-import image1 from "./Image/4ty.png";
+import image1 from "./Image/4ty.png"
 import image2 from "./Image/exercise2.jpg";
 
 
@@ -11,7 +11,7 @@ export default class Home extends Component {
     render() {
         return (
             <div class="container-fluid">
-                <Navbar/>
+            <Navbar/>
                 <br/>
                 <h1 >Exercise Tracker</h1>
                 <Container fluid={true} align="center" >

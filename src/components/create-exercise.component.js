@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-<<<<<<< HEAD:src/components/create-exercise.component.js
-import NavBar from './navbar.component';
-import Footer from './Footer';
-
-=======
-import NavBar from './Navbar';
->>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Create-Exercise.js
+import Navbar from "./navbar.component"
+import Footer from "./Footer"
 
 export default class CreateExercise extends Component {
   constructor(props) {
@@ -90,14 +85,9 @@ export default class CreateExercise extends Component {
   render() {
     return (
     <div>
-<<<<<<< HEAD:src/components/create-exercise.component.js
-      <div> <NavBar /></div>
-     <br/>
-      <h3>New Exercise Log </h3><br/>
-=======
-        <NavBar/>
-      <h3>Create New Exercise Log</h3>
->>>>>>> 4ca1fd2602c9cfbfd052d00e948d21db2c4877d0:src/components/Create-Exercise.js
+      <Navbar />
+      <br/>
+      <h3>ADD Exercise</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Username: </label>
@@ -143,12 +133,12 @@ export default class CreateExercise extends Component {
             />
           </div>
         </div>
-                <br></br>
+
         <div className="form-group">
-          <input type="submit" value="Create Exercise Log" className="btn btn-danger" />
+          <input type="submit" value="Add User Exercise " className="btn btn-danger" />
         </div>
       </form>
-      <Footer />
+      <Footer/>
     </div>
     )
   }
